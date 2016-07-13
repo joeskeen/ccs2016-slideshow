@@ -1,50 +1,239 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+	<title>vscode</title>
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="shortcut icon" type="image/png" href="/favicon.png?source=http://png-1.findicons.com/files/icons/2338/reflection/128/presentation.png"
+	/>
 
-		<!-- Printing and PDF exports -->
-		<script>
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<style>
+		.eventInfo {
+			position: absolute;
+			bottom: 10px;
+			left: 10px;
+			color: darkgray;
+			font-family: sans-serif;
+			display: flex;
+			flex-flow: row;
+			font-size: small;
+		}
+		
+		#timer {
+			position: absolute;
+			bottom: 10px;
+			right: 100px;
+			color: #666;
+			font-family: sans-serif;
+			display: flex;
+			flex-flow: row;
+			font-size: x-small;
+		}
+		
+		.spacer {
+			width: 15px;
+			height: 15px;
+		}
+	</style>
+
+	<!-- Printing and PDF exports -->
+	<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
 			link.type = 'text/css';
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<section>
+					<h1>Getting stuff done</h1>
+					<h2>Using vscode</h2>
+				</section>
+				<section>
+					<div class="stretch" style="display: flex; flex-flow: row">
+						<div style="display: flex; flex-flow: column;">
+							<div style="flex: 1"></div>
+							<img src="images/me.png" alt="a picture of me">
+							<div style="flex: 1"></div>
+						</div>
+						<div class="spacer"></div>
+						<div style="flex: 1; display: flex; flex-flow: column">
+							<div style="flex: 1"></div>
+							<div>
+								<h2>Joe Skeen</h2>
+								<h4>Intermountain Healthcare</h4>
+							</div>
+							<div style="flex: 1"></div>
+						</div>
+					</div>
+				</section>
+			</section>
+			<section>
+				<h2>Source Code Authoring Tools</h2>
+				<h3 class="fragment">IDE (Integrated Developer Environment)</h3>
+				<h3 class="fragment">Code Editor</h3>
+				<i class="fragment">Both use a different approach to productivity</i>
+			</section>
+			<section>
+				<h2>IDEs</h2>
+				<blockquote>
+					"I stay productive by integrating everything, including compiling, debugging, 
+					deploying, deep language understanding, code analysis, refactoring support, 
+					source code integration, and everything else you would ever need into a single tool."
+				</blockquote>
+			</section>
+			<section>
+				<h2>Code Editors</h2>
+				<blockquote>
+					"I stay productive by keeping it simple.  I focus on being able to quickly and 
+					efficiently navigate your code base and edit files.  You get to choose what other 
+					tools you use because we don't include them."
+				</blockquote>
+			</section>
+			<section>
+				<h2>Holy War</h2>
+				<div class="fragment"><b>IDE:</b> <blockquote style="display: inline">1982 Called.  They want their tools back.</blockquote></div>
+				<div class="fragment"><b>Editor:</b> <blockquote style="display: inline">But you don't have to take a coffee break every time I load up.</blockquote></div>
+				<div class="fragment"><b>IDE:</b> <blockquote style="display: inline">But I can do so much more than you.</blockquote></div>
+				<div class="fragment"><b>Editor:</b> <blockquote style="display: inline">Let's just hope your users don't need to pull more than<br>one of you up at a time, or their system will grind to a halt!</blockquote></div>
+				<div class="fragment"><b>IDE:</b> <blockquote style="display: inline">I catch errors as you type and give users<br>autocompletion, saving them tons of time.</blockquote></div>
+				<div class="fragment"><b>Editor:</b> <blockquote style="display: inline">You're right.  I'm going to start installing you<br>right now.  See you in a few hours!</blockquote></div>
+			</section>
+			<section>
+				<h2>What is Visual Studio Code?</h2>
+				<div style="display: flex; flex-flow: row;">
+					<div style="flex: 1">
+						<img src="images/whyvscode_macwinlinux2.png?source=https://code.visualstudio.com/Docs/editor/whyvscode" alt="VSCode is cross-platform">
+					</div>
+					<div style="width: 30%">
+						<ul>
+							<li class="fragment">new kind of tool</li>
+							<li class="fragment">powerful like an IDE</li>
+							<li class="fragment">lightweight editor</li>
+							<li class="fragment">free</li>
+							<li class="fragment">open-source</li>
+							<li class="fragment">cross-platform</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section>
+				Visual Studio Code "VSCode" is different from Microsoft Visual Studio
+				<div class="spacer"></div>
+				<div class="stretch">
+					<img src="images/vsfamily.png?source=https://channel9.msdn.com/Events/Build/2015/KEY01#0:44:12" alt="Visual Studio Family">
+				</div>
+				<div class="spacer"></div>
+				It's a cross platform Electon app that is free and open-source
+				<div class="spacer"></div>
+			</section>
+			<section>Navigation</section>
+			<section>Commands <code>></code></section>
+			<section>Debug</section>
+			<section>Git Integration</section>
+			<section>Reload Window</section>
+			<section>Snippets</section>
+			<section>Split Screen</section>
+			<section>Markdown</section>
+			<section>Linting</section>
+			<section>Changes View</section>
+			<section>Key Bindings</section>
+			<section>Preferences</section>
+			<section>Search</section>
+			<section>Peek</section>
+			<section>Find References</section>
+			<section>Zoom</section>
+			<section>Multiple Cursors</section>
+			<section>Extensions</section>
+			<section>JS Typings</section>
+			<section>
+				Emmett
+				<aside class="notes">section>h3{3 Reasons why VSCode is so cool}+ol>li*3</aside>
+			</section>
 		</div>
+	</div>
 
-		<script src="lib/js/head.min.js"></script>
-		<script src="js/reveal.js"></script>
+	<div class="eventInfo">
+		<img src="images/openwest-white.svg?source=https://cfp.openwest.org/uploads/openwest-white.svg" alt="OpenWest logo" style="width: 200px">
+		<div class="spacer"></div>
+		<p>
+			OpenWest Conference 2016<br /> July 13-16 2016<br /> South Towne Expo Center
+		</p>
+	</div>
 
-		<script>
+	<div id="timer"></div>
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
+
+				width: 1200,
+				height: 800,
+				margin: .1,
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'node_modules/reveal-monaco/index.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
+				],
+
+				monaco: {
+					theme: 'vs-dark',
+					fontSize: 20
+				}
 			});
+
+
+			(() => {
+				var presentationStartTime = new Date('Wed Jul 13 2016 16:00:00 GMT-0600 (MDT)');
+				var presentationEndTime = new Date('Wed Jul 13 2016 16:50:00 GMT-0600 (MDT)');
+
+				var loadTime = new Date();
+				var presentationLengthMs = presentationEndTime.getTime() - presentationStartTime.getTime();
+				var fifteenMinutesMs = 1000 * 60 * 15;
+				// in practice mode if within outside of presentation time (with 15 minute buffer)
+				var practiceMode = loadTime.getTime() > (presentationEndTime.getTime() + fifteenMinutesMs)
+					  || loadTime.getTime() < (presentationStartTime.getTime() - fifteenMinutesMs);
+
+				var timeCalcFn = practiceMode ? practiceTimeRemaining : presentationTimeRemaining;
+				var timerElement = document.getElementById('timer');
+				setInterval(() => {
+					var msRemaining = timeCalcFn();
+					var secondsRemaining = Math.floor((msRemaining / 1000) % 60); 
+					var minutesRemaining = Math.floor((msRemaining / 1000 / 60) % 60); 
+					var hoursRemaining = Math.floor(msRemaining / 1000 / 60 / 60); 
+					timerElement.innerText = (practiceMode ? '(Practice Mode) ': '') + hoursRemaining + ':' + minutesRemaining; // + ':' + secondsRemaining;
+				}, 1000);
+				
+				function practiceTimeRemaining() {
+					return presentationLengthMs - (Date.now() - loadTime);
+				}
+
+				function presentationTimeRemaining() {
+					return presentationEndTime - Date.now();
+				}
+			})();
 		</script>
-	</body>
+</body>
+
 </html>
