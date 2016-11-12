@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>vscode</title>
+	<title>Great Salt Lake Council College of Cub Scouting 2016</title>
 
 	<link rel="shortcut icon" type="image/png" href="/favicon.png?source=http://png-1.findicons.com/files/icons/2338/reflection/128/presentation.png"
 	/>
@@ -27,7 +27,7 @@
 			flex-flow: row;
 			font-size: small;
 		}
-		
+
 		#timer {
 			position: absolute;
 			bottom: 10px;
@@ -38,7 +38,7 @@
 			flex-flow: row;
 			font-size: x-small;
 		}
-		
+
 		.spacer {
 			width: 15px;
 			height: 15px;
@@ -60,8 +60,8 @@
 		<div class="slides">
 			<section>
 				<section>
-					<h1>Getting stuff done</h1>
-					<h2>Using vscode</h2>
+					<h1>College of Cub Scouting 2016</h1>
+					<h2>Great Salt Lake Council</h2>
 				</section>
 				<section>
 					<div class="stretch" style="display: flex; flex-flow: row">
@@ -196,10 +196,10 @@
 	</div>
 
 	<div class="eventInfo">
-		<img src="images/openwest-white.svg?source=https://cfp.openwest.org/uploads/openwest-white.svg" alt="OpenWest logo" style="width: 200px">
+		<img src="https://ccsslcubs.files.wordpress.com/2015/10/ccs-white.png" alt="CCS logo" style="width: 150px; height: 60px;">
 		<div class="spacer"></div>
 		<p>
-			OpenWest Conference 2016<br /> July 13-16 2016<br /> South Towne Expo Center
+			College of Cub Scouting 2016<br /> November 12 2016<br /> Jordan High School
 		</p>
 	</div>
 
@@ -233,8 +233,8 @@
 
 
 			(() => {
-				var presentationStartTime = new Date('Wed Jul 13 2016 16:00:00 GMT-0600 (MDT)');
-				var presentationEndTime = new Date('Wed Jul 13 2016 16:50:00 GMT-0600 (MDT)');
+				var presentationStartTime = new Date('Sat Nov 12 2016 8:00:00 GMT-0600 (MDT)');
+				var presentationEndTime = new Date('Sat Nov 12 2016 9:00:00 GMT-0600 (MDT)');
 
 				var loadTime = new Date();
 				var presentationLengthMs = presentationEndTime.getTime() - presentationStartTime.getTime();
@@ -247,12 +247,12 @@
 				var timerElement = document.getElementById('timer');
 				setInterval(() => {
 					var msRemaining = timeCalcFn();
-					var secondsRemaining = Math.floor((msRemaining / 1000) % 60); 
-					var minutesRemaining = Math.floor((msRemaining / 1000 / 60) % 60); 
-					var hoursRemaining = Math.floor(msRemaining / 1000 / 60 / 60); 
+					var secondsRemaining = Math.floor((msRemaining / 1000) % 60);
+					var minutesRemaining = Math.floor((msRemaining / 1000 / 60) % 60);
+					var hoursRemaining = Math.floor(msRemaining / 1000 / 60 / 60);
 					timerElement.innerText = (practiceMode ? '(Practice Mode) ': '') + hoursRemaining + ':' + minutesRemaining; // + ':' + secondsRemaining;
 				}, 1000);
-				
+
 				function practiceTimeRemaining() {
 					return presentationLengthMs - (Date.now() - loadTime);
 				}
